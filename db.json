@@ -1,0 +1,58 @@
+{
+    "listas":[
+        {
+          "title": "Backlog",
+          "description": "Nam pretium turpis et arcu. Duis arcu.",
+          "tareas":[
+            {
+              "text":"You can move these elements between the containers",
+              "progress": 25,
+              "image":null,
+              "tag":null
+            },
+            {
+              "text":"Moving them anywhere else isn't quite possible",
+              "progress": 33,
+              "image":"https://source.unsplash.com/sECcwm6BN8w/400x200",
+              "tag":"hold"
+            }
+          ]
+        },
+        {
+          "title": "In Progress",
+          "description": "Aenean posuere, tortor sed cursus feugiat.",
+          "tareas":[
+            {
+              "text":"Moving them anywhere else isn't quite possible",
+              "progress": 45,
+              "image":null,
+              "tag":"bug"
+            },
+            {
+              "text":"Anything can be moved around. That includes images, links or any other nested elements.",
+              "progress": 75,
+              "image":null,
+              "tag":null
+            }
+          ]
+        },
+        {
+          "title": "Completed",
+          "description": "Curabitur ligula sapien, tincidunt non.",
+          "tareas":[
+            {
+              "text":"Moving them anywhere else isn't quite possible",
+              "progress": 95,
+              "image":"https://source.unsplash.com/zNRITe8NPqY/400x200",
+              "tag":"enhancement"
+            },
+            {
+              "text":"You can move these elements between the containers",
+              "progress": 80,
+              "image":null,
+              "tag":null
+            }
+          ]
+        }
+      ]
+}

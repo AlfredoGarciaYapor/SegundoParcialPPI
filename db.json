@@ -1,4 +1,9 @@
 {
+    "userInfo":{
+      "nombre": "Alfredo Garcia Yapor",
+      "userName": "accept@test.com",
+      "password": "examen2doParcial"
+    },
     "listas":[
         {
           "title": "Backlog",

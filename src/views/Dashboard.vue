@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="container py-5">
-      <div class="row">
-
+      <button class="btn btn-info btn-block" @click="infoUserPage">Información del usuario</button>
+      <div class="row mt-5">
         <!-- Start lane -->
         <div class="col-12 col-lg-4" v-for="(list, key) in listas" :key="key">
           <ListaDeTareas :title="list.title" :description="list.description" :tareas="list.tareas" :index="key"/>
@@ -50,7 +50,10 @@ export default {
     
   },
   methods: {
-    ...mapMutations(['addList'])
+    ...mapMutations(['addList']),
+    infoUserPage(){
+      this.$router.replace({name: 'UserInfo'})
+    }
   },
 
 }

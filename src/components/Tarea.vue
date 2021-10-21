@@ -32,10 +32,10 @@
                     <option value="enhancement">Enhancement</option>
                 </select>
 
-                <input class="mb-1" type="text" v-model="task.text" placeholder="Ingresar Descripcción">
+                <input class="form-control mb-1" type="text" v-model="task.text" placeholder="Ingresar Descripcción">
                 <!-- <p class="mb-0">{{text}}</p> -->
 
-                <div class="text-right">
+                <div class="form-control text-right">
                     <input type="number" v-model="task.progress" placeholder="Ingresa porcentaje de progreso."/>
                 </div>
 
@@ -45,9 +45,15 @@
             </div>
             <div class="card-footer">
                 <!-- @click="edit = true" -->
-                <button class="btn btn-primary btn-block" v-if="edit == false" @click="edit = true">Editar</button>
-                <button class="btn btn-primary btn-block" v-if="edit == true" @click="edit = false">Cancelar Edición</button>
-                <button class="btn btn-primary btn-block" v-if="edit == true" @click="updateTask(task), edit = false">Save</button>
+                <div class="row">
+                    <div class="col-7">
+                        <button class="btn btn-primary btn-block" v-if="edit == false" @click="edit = true">Editar</button>
+                        <button class="btn btn-primary btn-block mr-3" v-if="edit == true" @click="edit = false">Cancelar Edición</button>
+                    </div>
+                    <div class="col-2 offset-2 text-end">
+                        <button class="btn btn-primary btn-block ml-2" v-if="edit == true" @click="updateTask(task), edit = false">Save</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

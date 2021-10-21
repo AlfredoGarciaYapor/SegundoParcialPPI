@@ -1,6 +1,6 @@
-<template>
+<template class="bg-secondary">
 
-    <div class="login">
+    <div class="bg-secondary">
         <div class="container">
             <div class="card mt-5">
                 <div class="card-body mt-auto">
@@ -13,22 +13,22 @@
                     <div class="row justify-content-center">
                         <div class="col">
                             <form action="" @submit.prevent="logIn()">
-                                <div class="row">
-                                    <div class="col text-center mt-3">
-                                        <input type="text" placeholder="Nombre de usuario" v-model="userName">
+                                <div class="row justify-content-center">
+                                    <div class="col-4 text-center mt-3">
+                                        <input class="form-control" type="text" placeholder="Nombre de usuario" v-model="userName">
 
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col text-center mt-3">
-                                        <input type="password" placeholder="Contraseña" v-model="password">
+                                <div class="row justify-content-center">
+                                    <div class="col-4 text-center mt-3">
+                                        <input class="form-control" type="password" placeholder="Contraseña" v-model="password">
 
                                     </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col text-center mt-3">
-                                        <input type="submit" value="Iniciar Sesión">
+                                        <input class="btn btn-primary btn-block" type="submit" value="Iniciar Sesión">
 
                                     </div>
                                 </div>
@@ -44,7 +44,7 @@
 <style lang="css" href="./assets/styles/styles.css"></style>
 
 <script>
-import {mapState} from 'vuex'
+import {mapState, mapGetters} from 'vuex'
 // ES6 Modules or TypeScript
 // main.js
 import Vue from 'vue';
@@ -63,6 +63,13 @@ export default {
             password:'',
             // match:false
         }
+    },
+    computed:{
+        ...mapGetters(['getTasks']),
+        ...mapState(['userInfo'])
+    },
+    mounted() {
+        
     },
     methods: {
         logIn(){

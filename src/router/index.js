@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
-import About from '../views/About.vue'
+import UserInfo from '../views/UserInfo.vue'
 import LogIn from '../views/LogIn.vue'
 
 Vue.use(VueRouter)
@@ -18,9 +18,9 @@ const routes = [
     component: LogIn
   },
   {
-    path: '/About',
-    name: 'About',
-    component: About
+    path: '/UserInfo',
+    name: 'UserInfo',
+    component: UserInfo
   },
 ]
 

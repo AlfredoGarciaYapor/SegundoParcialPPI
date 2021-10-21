@@ -1,12 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+
 // import { login } from './login.module';
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    userInfo:{
+      nombre: "Alfredo Garcia Yapor",
+      userName: "accept@test.com",
+      password: "examen2doParcial"
+    },
     listas:[
       {
         title: "Backlog",
@@ -108,11 +114,24 @@ export default new Vuex.Store({
       state.listas[task.listaIndex].tareas[task.tareaIndex].tag = task.tag
 
 
+    },
+    SET_LISTAS(state, newListas){
+      state.listas = newListas; 
     }
   },
-  actions: {
+  getters: { 
+    getTasks: (state) => state.listas 
   },
-  modules: {
-    // login
-  }
+  actions: {
+    async getListsInfo(){
+      axios.get('http://localhost:300/listas')
+      .then((response) => {
+        
+        console.log('%c⧭', 'color: #ff0000', response);
+        commit('SET_LISTAS', response.data);
+        console.log('%c⧭', 'color: #00e600', this.state.listas);
+      })
+    }
+  },
+  modules: {}
 })
